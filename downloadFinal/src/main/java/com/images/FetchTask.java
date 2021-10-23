@@ -8,7 +8,7 @@ import java.util.*;
 // 从网页抓取原数据
 // </summary>
 public class FetchTask extends Thread implements ITask {
-    static String url = "http://www.bizhi88.com/c1/";
+    static String url = "http://www.bizhi88.com/c18/";
     private static final Path sysPath = Paths.get("/Users", "andrewyang", "JAVAImages", "DownloadMaster");
     String baseUrl = url;
 
