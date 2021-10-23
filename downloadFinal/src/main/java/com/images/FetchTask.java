@@ -17,7 +17,7 @@ public class FetchTask extends Thread implements ITask {
         int i = DBHelper.ProgressChecker();
         do {
             baseUrl = url + i + ".html";
-            System.out.println("正在下载网页： " + baseUrl);
+            System.out.println("Downloading Webpage： " + baseUrl);
             List<ImageMateData> list = spilder.FetchMates(baseUrl);
             for (ImageMateData item : list) {
                 if (DBHelper.Exists(item)) {

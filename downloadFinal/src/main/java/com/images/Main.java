@@ -21,7 +21,7 @@ public class Main {
         List<DownloadTask> taskList = new ArrayList<DownloadTask>();
         for (int i = 0; i < taskCount; i++) {
             DownloadTask task = new DownloadTask();
-            task.setName("下载线程" + i);
+            task.setName("Download Thread" + i);
             System.out.println(task);
             task.start();
             taskList.add(task);

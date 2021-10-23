@@ -34,12 +34,12 @@ public class DownloadTask extends Thread implements ITask {
                 continue;
             }
 
-            System.out.println("Thread：" + Thread.currentThread().getName() + " (" + TaskDataContext.Size() + ")下载任务:"
+            System.out.println("Thread：" + Thread.currentThread().getName() + " (" + TaskDataContext.Size() + ")Download Task:"
                     + task.getHash());
             Boolean downloadRes = spilder.Download(task);
             task.Status = downloadRes ? 1 : 2;
             DBHelper.Update(task);
         } while (stillRunning);
-        System.out.println("线程：" + Thread.currentThread().getName() + "下载完毕");
+        System.out.println("Thread：" + Thread.currentThread().getName() + "Download Complete");
     }
 }
