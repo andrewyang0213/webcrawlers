@@ -1,0 +1,27 @@
+server:
+  # servlet: 
+  #   context-path: /index
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/download_db?useSSL=false
+    username: root
+    password: ubercharge1
+  thymeleaf:
+    mode: HTML5
+    cache: false
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    # suffix: .vm
+    servlet:
+      content-type: text/html
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    cn.tellsea.mapper: debug
